@@ -1,0 +1,26 @@
+- adx_adddescription: false
+  adx_attributelogicalname: statecode
+  adx_entityform: 5b5ac8c9-3792-eb11-b1ac-000d3ae85a77
+  adx_entityformforcreate: 5b5ac8c9-3792-eb11-b1ac-000d3ae85a77
+  adx_entityformmetadataid: b72ded36-3892-eb11-b1ac-000d3ae85a77
+  adx_fieldisrequired: false
+  adx_ignoredefaultvalue: false
+  adx_onsavetype: 100000000
+  adx_onsavevalue: Not Filed
+  adx_randomizeoptionsetvalues: false
+  adx_setvalueonsave: true
+  adx_type: 100000000
+  adx_useattributedescriptionproperty: true
+- adx_adddescription: false
+  adx_attributelogicalname: egcs_dataentrysource
+  adx_entityform: 5b5ac8c9-3792-eb11-b1ac-000d3ae85a77
+  adx_entityformforcreate: 5b5ac8c9-3792-eb11-b1ac-000d3ae85a77
+  adx_entityformmetadataid: d0a50900-3892-eb11-b1ac-000d3ae85a77
+  adx_fieldisrequired: false
+  adx_ignoredefaultvalue: false
+  adx_onsavetype: 100000000
+  adx_onsavevalue: Portal
+  adx_randomizeoptionsetvalues: false
+  adx_setvalueonsave: true
+  adx_type: 100000000
+  adx_useattributedescriptionproperty: true

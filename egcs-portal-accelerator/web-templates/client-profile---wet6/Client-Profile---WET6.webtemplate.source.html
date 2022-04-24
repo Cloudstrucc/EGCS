@@ -1,0 +1,154 @@
+{% if user %}
+<main property="mainContentOfPage" class="container" typeof="WebPageElement" style="padding-bottom:8%">
+    {% assign cacheString = 'now' | date: "%s" %}
+   
+    <!-- <h1 property="name">{{ snippets["Home/MyApplications"] }}<small
+            class="pull-right">{{user.fullname}}</small></h1> -->
+    
+    {% include 'Breadcrumbs' %}
+    <h1 property="name">{{ snippets["ClientProfile/MyOrganizations"] }}</h1>
+    <section>
+       
+        {{ snippets["ClientProfile/MyOrganizationsDescription"]}}
+        
+    </section>
+   
+    {% include 'My Organizations' %}
+    
+</main>
+{% else %}
+<!-- unauth -->
+
+{% if website.selected_language.Name == "English" %}
+<main property="mainContentOfPage" class="" typeof="WebPageElement">
+    <div class="experimental bg-cover"
+        data-bgimg="" style="">
+        <div class="container p-0 p-sm-3">
+            <div class="well header-rwd brdr-0 brdr-rds-0 text-white bg-gctheme">
+                <h1 property="name" class="wb-cont">{{snippets["Department Name"]}}</h1>
+                <p class="mrgn-tp-md">{{snippets["Portal/Name"]}}</p>
+            </div>
+        </div>
+        <div class="bg-gctheme opct-90">
+            <div class="container">
+                <div class="row">
+                    <div class="mrgn-tp-md mrgn-bttm-md col-xs-12">
+                        <p class="pull-left text-white mrgn-bttm-0">{{snippets["Portal/Name"]}} &nbsp;</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="gc-srvinfo container">
+        <div class="container">
+
+            <ul class="wb-eqht list-unstyled mrgn-tp-md mrgn-bttm-sm lst-spcd-2 list-responsive">
+                <li><a href="/SignIn">Login or Register</a></li>
+                <li><a href="/fundingopportunities">Funding Opportunities</a></li>
+                <!-- <li><a href="https://www.canada.ca/en/services/benefits/ei.html">Policy Information</a></li> -->
+
+            </ul>
+        </div>
+    </section>
+    <section class="home-your-gov gc-srvinfo well well-sm brdr-0">
+        <div class="container">
+            <h2>Your government</h2>
+            <div class="row mrgn-bttm-md">
+                <div class="col-lg-7 col-xs-12 col-md-6">
+                    <div class="wb-eqht row">
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/en/contact.html">Contact us</a></h3>
+                            <p>Department and agency contacts, change your address</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a>
+                            </h3>
+                            <p>A list of current government and related organizations</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/en/government/system.html">How government works</a></h3>
+                            <p>Government structure, priorities, finances and regulations</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://open.canada.ca/en">Open government</a></h3>
+                            <p>Accessible government, open information and data, open dialogue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% else %}
+
+<main property="mainContentOfPage" class="" typeof="WebPageElement">
+    <div class="experimental bg-cover"
+        data-bgimg="" style="">
+        <div class="container p-0 p-sm-3">
+            <div class="well header-rwd brdr-0 brdr-rds-0 text-white bg-gctheme">
+                <h1 property="name" class="wb-cont">{{snippets["Department Name"]}}</h1>
+                <p class="mrgn-tp-md">{{snippets["Portal/Name"]}}</p>
+            </div>
+        </div>
+        <div class="bg-gctheme opct-90">
+            <div class="container">
+                <div class="row">
+                    <div class="mrgn-tp-md mrgn-bttm-md col-xs-12">
+                        <p class="pull-left text-white mrgn-bttm-0">{{snippets["Portal/Name"]}} &nbsp;</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="gc-srvinfo container">
+        <div class="container">
+
+            <ul class="wb-eqht list-unstyled mrgn-tp-md mrgn-bttm-sm lst-spcd-2 list-responsive">
+                <li><a href="/SignIn">Connexion ou inscription</a></li>
+                <li><a href="/fundingopportunities">Opportunités de financement</a></li>
+                <!-- <li><a href="https://www.canada.ca/en/services/benefits/ei.html">Informations sur la politique de 
+                        filtrage de sécurité</a></li>-->
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="home-your-gov gc-srvinfo well well-sm brdr-0" style="padding-bottom:8%">
+        <div class="container">
+            <h2>Votre gouvernement</h2>
+            <div class="row">
+                <div class="col-lg-7 col-xs-12 col-md-6">
+                    <div class="wb-eqht row">
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/fr/contact.html">Contactez-nous</a></h3>
+                            <p>Coordonnées des ministères et des agences, changez votre adresse</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/fr/gouvernement/min.html">Ministères et organismes</a>
+                            </h3>
+                            <p>Une liste des organisations gouvernementales et connexes actuelles</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/fr/gouvernement/systeme.html">Comment le gouvernement
+                                    fonctionne</a></h3>
+                            <p>La structure, les priorités, les finances et les réglementations du gouvernement</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://open.canada.ca/fr">Gouvernement ouvert</a></h3>
+                            <p>Gouvernement accessible, informations et données ouvertes, dialogue ouvert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% endif %}
+
+{% endif %}

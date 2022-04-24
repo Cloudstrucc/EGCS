@@ -1,0 +1,27 @@
+{% assign cacheString2 = 'now' | date: "%s" %}
+
+{% if targetEntity && targetId %}
+  {% fetchxml query %}
+  <fetch no-lock="true" >
+    <entity name="pspc_isswebpagemetadata" >
+      <attribute name="pspc_opt_validationstatus" />
+      <attribute name="pspc_txt_validationerrors" />
+      <filter>
+        <condition attribute="pspc_webpagewebpageid" operator="eq" value="{{ pspc_webpagewebpageid }}" />
+      {% if targetEntity == 'pspc_securityassessmentapplication' && targetId %}
+        <condition attribute="pspc_securityassessmentapplicationid" operator="eq" value="{{ targetId }}" />
+      {% endif %}
+        <condition attribute="pspc_name" operator="ne" value="{{ cacheString2 }}" />
+      </filter>
+    </entity>
+  </fetch>
+  {% endfetchxml %}
+
+  {% if query.results.entities.size == 1 %}
+      {% assign pspc_isswebpagemetadata = query.results.entities[0] %}
+  {% endif %}
+{% endif %}
+
+{% comment %}
+build json here with foreach loop out of fetch for ajax call
+{% endcomment %}

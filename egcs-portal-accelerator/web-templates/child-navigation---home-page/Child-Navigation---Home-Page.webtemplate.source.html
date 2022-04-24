@@ -1,0 +1,210 @@
+{% assign showchildren = showchildren | default: true %}
+{% assign showdescriptions = showdescriptions | default: false %}
+<div class="child-navigation content-panel panel panel-default">
+    <div class="panel-heading">
+        <h4>{% editable snippets "Page Children Heading" default: 'In This Section' %}</h4>
+    </div>
+ 
+    {% if showchildren and page.children.size > 0 %}
+ 
+    <div class="col-md-4 col-xs-12 pull-right">
+        <section class="lnkbx">
+            <h2>Most requested</h2>
+            <ul>
+               <li><a href="/">Funding Opportunities</a>
+                </li>
+                <li><a href="/MyApps">My Funding</a>
+                </li>
+                <li><a href="/faq">Frequently Asked Questions</a>
+                </li>
+                <li><a href="enquiries">Enquiries </a>
+                </li>
+                <li><a href="/">Home </a>
+                </li>
+                <li><a href="https://canada.ca">Your Government</a>
+                </li>
+ 
+            </ul>
+        </section>
+    </div>
+ 
+    <section class="gc-srvinfo col-md-8 pull-left" style="padding:10px">
+        <div class="wb-eqht row wb-init wb-eqht-inited" id="wb-auto-7">
+            
+                
+                    <div class="col-xs-12 col-sm-4 col-md-6">
+                        <div class="well hght-inhrt">               
+                            <div class="panel panel-default eqht-trgt">
+                                <div class="panel-body">
+                                    <figure class="thumnail full-width img-responsive">
+                                        <figcaption class="caption">
+                                            <h2 class="h4">Go to Funding Opportunities</h2>
+                                                <p>
+                                                    View a list of funding opportunities offered by the Department.
+                                                </p>                                           
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <ul class="list-inline">
+                                <li>                                                                                                                                                         
+                                    <a href="/fo" class="btn btn-primary" role="button">{{ snippets["General/View"] }}</a>                                                                     
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-6">
+                            <div class="well hght-inhrt">               
+                                <div class="panel panel-default eqht-trgt">
+                                    <div class="panel-body">
+                                        <figure class="thumnail full-width img-responsive">
+                                            <figcaption class="caption">
+                                                <h2 class="h4">Go to My Funding</h2>
+                                                    <p>
+                                                        View a list of of your current and historical applications
+                                                    </p>                                           
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <ul class="list-inline">
+                                    <li>                                                                                                                                                         
+                                        <a href="/myapps" class="btn btn-primary" role="button">{{ snippets["General/View"] }}</a>                                                                     
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                
+    </section>
+</div>
+ 
+{% endif %}
+<div class="row"><br><br></div>
+ 
+<div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4">
+        <details class="brdr-0">
+            <summary class="btn btn-default text-center">Report a problem on this page</summary>
+            <div class="well row">
+                <div class="gc-rprt-prblm">
+                    <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl" id="wb-auto-8">
+                        <form action="#">
+                            <fieldset>
+                                <legend><span class="field-name">Please select all that apply: </span></legend>
+                                <div class="checkbox">
+                                    <label for="gc-rprt-prblm-f1">
+                                        <input type="checkbox" name="problem1" value="Yes" id="gc-rprt-prblm-f1">A link,
+                                        button or video is not working
+                                    </label>
+                                    <input name="problem1" type="hidden" value="No">
+                                </div>
+                                <div class="checkbox">
+                                    <label for="gc-rprt-prblm-f2">
+                                        <input type="checkbox" name="problem2" value="Yes" id="gc-rprt-prblm-f2">It has
+                                        a spelling mistake
+                                    </label>
+                                    <input name="problem2" type="hidden" value="No">
+                                </div>
+                                <div class="checkbox">
+                                    <label for="gc-rprt-prblm-f3">
+                                        <input type="checkbox" name="problem3" value="Yes"
+                                            id="gc-rprt-prblm-f3">Information is missing
+                                    </label>
+                                    <input name="problem3" type="hidden" value="No">
+                                </div>
+                                <div class="checkbox">
+                                    <label for="gc-rprt-prblm-f4">
+                                        <input type="checkbox" name="problem4" value="Yes"
+                                            id="gc-rprt-prblm-f4">Information is outdated or wrong
+                                    </label>
+                                    <input name="problem4" type="hidden" value="No">
+                                </div>
+                                <div class="checkbox">
+                                    <label for="gc-rprt-prblm-f5">
+                                        <input type="checkbox" name="problem5" value="Yes" id="gc-rprt-prblm-f5">I can't
+                                        find what I'm looking for
+                                    </label>
+                                    <input name="problem5" type="hidden" value="No">
+                                </div>
+                                <div class="checkbox">
+                                    <label for="gc-rprt-prblm-f6">
+                                        <input type="checkbox" name="problem6" value="Yes" id="gc-rprt-prblm-f6">Other
+                                        issue not in this list
+                                    </label>
+                                    <input name="problem6" type="hidden" value="No">
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-primary wb-toggle wb-init wb-toggle-inited"
+                                data-toggle="{&quot;stateOff&quot;: &quot;hide&quot;, &quot;stateOn&quot;: &quot;show&quot;, &quot;selector&quot;: &quot;.gc-rprt-prblm-tggl&quot;}"
+                                aria-controls="wb-auto-8 wb-auto-9">Submit</button>
+                        </form>
+                    </div>
+                    <div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide" id="wb-auto-9">
+                        <h3>Thank you for your help!</h3>
+                        <p>You will not receive a reply. For enquiries, please <a
+                                href="https://www.canada.ca/en/contact.html">contact us</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </div>
+    <div class="wb-share col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-4 col-lg-offset-5 wb-init wb-share-inited"
+        data-wb-share="{&quot;lnkClass&quot;: &quot;btn btn-default btn-block&quot;}" id="wb-auto-10">
+        <section id="shr-pg0" class="shr-pg mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Share this page</h2>
+            </header>
+            <div class="modal-body">
+                <ul class="list-unstyled colcount-xs-2">
+                    <li><a href="https://www.blogger.com/blog_this.pyra?t=&amp;u=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html&amp;n=%5BTheme%20title%5D%20-%20Canada.ca"
+                            class="shr-lnk blogger btn btn-default" target="_blank"
+                            rel="noreferrer noopener">Blogger</a></li>
+                    <li><a href="https://www.diigo.com/post?url=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html&amp;title=%5BTheme%20title%5D%20-%20Canada.ca"
+                            class="shr-lnk diigo btn btn-default" target="_blank" rel="noreferrer noopener">Diigo</a>
+                    </li>
+                    <li><a href="mailto:?to=&amp;subject=%5BTheme%20title%5D%20-%20Canada.ca&amp;body=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html%0A"
+                            class="shr-lnk email btn btn-default" target="_blank" rel="noreferrer noopener">Email</a>
+                    </li>
+                    <li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html&amp;t=%5BTheme%20title%5D%20-%20Canada.ca"
+                            class="shr-lnk facebook btn btn-default" target="_blank"
+                            rel="noreferrer noopener">Facebook</a></li>
+                    <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=&amp;su=%5BTheme%20title%5D%20-%20Canada.ca&amp;body=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html%0A"
+                            class="shr-lnk gmail btn btn-default" target="_blank" rel="noreferrer noopener">Gmail</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html&amp;title=%5BTheme%20title%5D%20-%20Canada.ca&amp;ro=false&amp;summary=&amp;source="
+                            class="shr-lnk linkedin btn btn-default" target="_blank"
+                            rel="noreferrer noopener">LinkedIn®</a></li>
+                    <li><a href="https://www.myspace.com/Modules/PostTo/Pages/?u=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html&amp;t=%5BTheme%20title%5D%20-%20Canada.ca"
+                            class="shr-lnk myspace btn btn-default" target="_blank"
+                            rel="noreferrer noopener">MySpace</a></li>
+                    <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html&amp;media=&amp;description=%5BTheme%20title%5D%20-%20Canada.ca"
+                            class="shr-lnk pinterest btn btn-default" target="_blank"
+                            rel="noreferrer noopener">Pinterest</a></li>
+                    <li><a href="https://reddit.com/submit?url=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html&amp;title=%5BTheme%20title%5D%20-%20Canada.ca"
+                            class="shr-lnk reddit btn btn-default" target="_blank" rel="noreferrer noopener">reddit</a>
+                    </li>
+                    <li><a href="https://tinyurl.com/create.php?url=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html"
+                            class="shr-lnk tinyurl btn btn-default" target="_blank"
+                            rel="noreferrer noopener">TinyURL</a></li>
+                    <li><a href="https://www.tumblr.com/share/link?url=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html&amp;name=%5BTheme%20title%5D%20-%20Canada.ca&amp;description="
+                            class="shr-lnk tumblr btn btn-default" target="_blank" rel="noreferrer noopener">tumblr</a>
+                    </li>
+                    <li><a href="https://twitter.com/intent/tweet?text=%5BTheme%20title%5D%20-%20Canada.ca&amp;url=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html"
+                            class="shr-lnk twitter btn btn-default" target="_blank"
+                            rel="noreferrer noopener">Twitter</a></li>
+                    <li><a href="https://api.whatsapp.com/send?text=%5BTheme%20title%5D%20-%20Canada.ca%0A%0Ahttps%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html"
+                            class="shr-lnk whatsapp btn btn-default" target="_blank"
+                            rel="noreferrer noopener">Whatsapp</a></li>
+                    <li><a href="https://compose.mail.yahoo.com/?to=&amp;subject=%5BTheme%20title%5D%20-%20Canada.ca&amp;body=https%3A%2F%2Fwet-boew.github.io%2Fthemes-dist%2FGCWeb%2Ftheme-en.html%0A"
+                            class="shr-lnk yahoomail btn btn-default" target="_blank" rel="noreferrer noopener">Yahoo!
+                            Mail</a></li>
+                </ul>
+                <p class="col-sm-12 shr-dscl">No endorsement of any products or services is expressed or implied.</p>
+                <div class="clearfix"></div>
+            </div>
+        </section><a href="#shr-pg0" aria-controls="shr-pg0"
+            class="shr-opn wb-lbx btn btn-default btn-block wb-lbx-inited wb-init" id="wb-auto-11"><span
+                class="glyphicon glyphicon-share"></span>Share this page</a>
+    </div>
+</div>

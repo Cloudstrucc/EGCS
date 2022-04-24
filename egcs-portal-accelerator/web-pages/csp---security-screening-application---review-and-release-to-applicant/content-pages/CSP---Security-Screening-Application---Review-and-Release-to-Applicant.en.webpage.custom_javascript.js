@@ -1,0 +1,1 @@
+{% include 'Tab Instructions' tab_name: "TAB_Review_and_release_to_applicant", snippet_name: "Security Screening Application/Tab/Instructions/TAB_Review_and_release_to_applicant" %}

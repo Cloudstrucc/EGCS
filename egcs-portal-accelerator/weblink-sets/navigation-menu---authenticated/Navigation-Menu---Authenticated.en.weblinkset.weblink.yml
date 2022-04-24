@@ -1,0 +1,44 @@
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 1
+  adx_displaypagechildlinks: false
+  adx_name: Funding Opportunities
+  adx_openinnewwindow: false
+  adx_pageid: 76bd18bf-4e80-eb11-a812-000d3a84bb59
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 6da66981-2480-eb11-a812-000d3a84b670
+  adx_weblinksetid: 33da0d1a-181f-eb11-a813-000d3af3ac9d
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 3
+  adx_displaypagechildlinks: false
+  adx_name: My Funding
+  adx_openinnewwindow: false
+  adx_pageid: 94c3d084-b3a9-eb11-9442-000d3a8410dc
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: a564eacf-191f-eb11-a813-000d3af3ac9d
+  adx_weblinksetid: 33da0d1a-181f-eb11-a813-000d3af3ac9d
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 2
+  adx_displaypagechildlinks: false
+  adx_name: My Organization
+  adx_openinnewwindow: false
+  adx_pageid: 4e42c69b-93a7-eb11-9442-000d3ae99d9a
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: acaa31a7-d3a1-eb11-b1ac-000d3ae8b98c
+  adx_weblinksetid: 33da0d1a-181f-eb11-a813-000d3af3ac9d
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 4
+  adx_displaypagechildlinks: false
+  adx_name: Notification Centre
+  adx_openinnewwindow: false
+  adx_pageid: 51c7c7b5-7171-ea11-a811-000d3af42f4a
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: add7c7e6-191f-eb11-a813-000d3af3ac9d
+  adx_weblinksetid: 33da0d1a-181f-eb11-a813-000d3af3ac9d

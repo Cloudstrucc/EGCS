@@ -1,0 +1,120 @@
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: 'The Designated Official is an officer, director or employee of the registrant with authority, responsibility and integrity to perform legal responsibilities which includes ensuring employees, officers and directors who are not AI, DO or Owners are properly security assessed and authorized before they can examine, possess or transfer controlled goods.  The DO is a Canadian citizen or permanent resident ordinarily residing in Canada, who is the organization’s point of contact registered with the CGP, has been appointed by the registrant and has completed the CGP’s Designated Official Certification Program. Every registering organization must appoint at least one designated official for every 150 employees accessing controlled goods. The DO of a site is only authorized to administer exemption and industry referral requests of that site, report site-specific changes, and conduct security assessment activity reporting of that site. '
+  adx_name: Designated Official
+  adx_webroleid: 01642ffc-22e3-ea11-a813-000d3af413df
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: CGP Industry Referral Applicant is an employee, officer, or director with a CGP registrant organization that has been security assessed by a Designated Official and where the DO has determined their risk level to be Moderate or High. These individuals will be referred to CGP Exemptions Division for security assessment by an Exemptions Analyst.
+  adx_name: CGP Industry Referral Applicant
+  adx_webroleid: 0cafd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: A CGP Registration Applicant is a registering AI, DO, or Owner, who is responsible for providing the required background information needed to initiate a registration security assessment.  If the Registration Applicant is for a DO, AI or Owner, the Registration Applicant will submit their registration security assessment through the system. In order to be security assessed, an Owner will need to own 20% or more stake in the business and have a requirement to examine, possess, transfer controlled goods.
+  adx_name: CGP Registration Applicant
+  adx_webroleid: 0eafd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: 'The Contract Security & Privacy Officer is the security official representative of the contract- or sub-contract awarded foreign organization on a Protected contract requiring an equivalency. The CSPO will be responsible for submitting the equivalency request with the required information, ensuring that verifications have been completed on personnel associated to the contract, DSC and IT security requirements have been satisfied, and providing an attestation. A Contract Security & Privacy Officer can be associated with more than one organization. A Contract Security & Privacy Officer can trigger amendments related to the contract, site or personnel changes. '
+  adx_name: Contract Security & Privacy Officer
+  adx_webroleid: 10afd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: CSP PSS Applicant is an employee of an organization registered with CSP seeking to initiate a security screening request to obtain access to Government of Canada Protected / Classified or above information. The PSS Applicant is responsible for completing their application for security screening application through the system, email, mail or fax. They are also responsible for providing additional information, if required, and communicating any change in circumstance (e.g. change in citizenship status) or  initiating simple amendments (e.g., contact information changes).
+  adx_name: CSP PSS Applicant
+  adx_webroleid: 12afd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: ISS Internal Services is the unit responsible for the central intake and transfer of all physical mail received by ISS.
+  adx_name: ISS Internal Services
+  adx_webroleid: 14afd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: A GC Project Manager is the individual responsible for leading a project in a department or agency, which may be part of an active bid solicitation or contract and have industrial security requirements.
+  adx_name: GC Project Manager
+  adx_webroleid: 14e5f8b8-22e3-ea11-a813-000d3af413df
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: "The Company Security Officer (CSO) is the lead security official within the organization who acts as the registered organization’s point of contact with the Contract Security Program and is accountable to the CSP and to the organization’s designated Key Senior Official on all contract security matters. The CSO is responsible for maintaining the organization’s registration, initiating personnel security screening requests, addressing security issues, and administering all operational contract security requests on a day-to-day basis. The CSO will need to be approved as a minimum requirement at the required security level. A CSO will be delegated the responsibility to work with CSP in order to ensure that the correct KSOs are identified, cleared or excluded. It is also the CSO / ACSO's responsibility to ensure any changes in KSOs are provided to CSP. The CSO will also be responsible for appointing, briefing and training one or more ACSOs if required and will be required to verify the completeness of the request. The CSO is also responsible for appointing from among the appointed ACSOs, one officer to be the CSO in their absence. "
+  adx_name: Company Security Officer
+  adx_webroleid: 14f9864b-15e3-ea11-a813-000d3af413df
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: "A Key Senior Official (KSO) is a senior member of an organization who influences the organization's policies or practices in the performance of protected and classified contracts, and may be an owner, officer, director, executive, partner or board member. CSO/ACSO are also considered KSOs. The KSO is responsible for initiating a registration with CSP and ensuring that complete and accurate information is provided to process the registration request. A KSO can also initiate an amendment at any point in the process or a renewal request if they are the CSO/ACSO. The KSO is responsible for correctly identifying the ownership structure, board of directors and other key roles within the organization when submitting an application as this information will be used to determine the need for parental and/or KSO exclusion depending on the type of request that is initiated. "
+  adx_name: Key Senior Official
+  adx_webroleid: 16afd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: 'A Non-Registered External User is an external, unauthenticated user who may be able to initiate a registration request and initiate basic inquiries or service request for common program-related questions by using a temporary login to register. A Non-Registered External User may also be involved in anonymously reporting a security breach. '
+  adx_name: Non-Registered External User
+  adx_webroleid: 18afd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: An owner is a key individual or multiple individuals who have invested in the private sector organization's capital. Owners can include a sole proprietor, an individual with ownership in a large corporation. Owners can initiate organization-specific and program-specific service requests and program inquiries. In order to be security assessed, an Owner will need to own 20% or more stake in the business and have a requirement to examine, possess, transfer controlled goods.
+  adx_name: Owner
+  adx_webroleid: 1aafd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: A Registered External User can comprise of security officials, key senior officials, authorized individuals, designated officials, Contract Security Privacy Officer and owners who are already registered with CSP and / or CGP and can initiate organization- and program-specific inquiries and service requests for their areas of responsibility. A single registered external user can possess multiple system roles for different organizations or for the same organization. Registered external users may also include government stakeholders such as GC Security Officer, GC Procurement Officer, GC Project Manager and GC Unit Security Officer.
+  adx_name: Registered External User
+  adx_webroleid: 1cafd1e5-b4e3-ea11-a813-000d3af4316a
+  importsequencenumber: 3
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_name: Administrators
+  adx_webroleid: 6bcf8d45-9ff1-404a-827e-efc5c668f813
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: Service Request for Organization
+  adx_name: Organization
+  adx_webroleid: 7fd6bbad-10e3-ea11-a813-000d3af413df
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: "An Authorized Individual is an owner or a senior official within an organization who is the organization's main point of contact seeking or maintaining registration with the Controlled Goods Program. The AI is a Canadian citizen or a permanent resident ordinarily residing in Canada who operates a business in Canada. "
+  adx_name: Authorized Individual
+  adx_webroleid: 8967af08-15e3-ea11-a813-000d3af413df
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_name: Employee
+  adx_webroleid: 9e59b3b4-540e-eb11-a813-000d3af46865
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: Service Request for Individuals
+  adx_name: Individual
+  adx_webroleid: a03b4e95-10e3-ea11-a813-000d3af413df
+- adx_anonymoususersrole: true
+  adx_authenticatedusersrole: false
+  adx_name: Anonymous Users
+  adx_webroleid: a60a3ce4-2db4-4c26-8ba7-1a3b36f3a0a7
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: Authenticated Users
+  adx_webroleid: bde7522a-3a52-4619-8531-b022b9c5104f
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: "A GC Security Officer is the main security point of contact in a department, agency or crown corporation, responsible for collaborating with ISS and specifically, the contract security program. The GC Security Officer has the authority to delegate their responsibility to other Security Officers and Unit Security Officers (USOs) within their organization. The GC Security Officer can include a Chief Security Officer. The Chief Security Officer is the individual responsible within a department or agency with the delegated authority for all security management activities. The Chief Security Officer is the GC organization's main point of contract with the CSP and in certain instances may authorize the initiation of registration with CSP without requiring a sponsorship request to be initiated or act as the sponsor for a private sector organization. "
+  adx_name: GC Security Officer
+  adx_webroleid: c217c894-22e3-ea11-a813-000d3af413df
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: 'A GC Procurement Officer is a representative of the department or agency and is responsible for the implementation of tools and processes required for the administration of the contract, bid solicitation or project. '
+  adx_name: GC Procurement Officer
+  adx_webroleid: c76c9369-22e3-ea11-a813-000d3af413df
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: A CGP Exemptions Applicant is a temporary worker, international student or visitor applying for an exemption request or an employee, officer or director of a private sector organization who is not a DO, AI or Owner for an industry referral. A CGP Exemptions Applicant will be responsible for completing their application for exemption and providing the required information to a DO to input into the system. This includes communicating any changes to circumstances to the DO, who will be responsible for initiating any amendments where required.
+  adx_name: CGP Exemptions Applicant
+  adx_webroleid: e4368cae-24e3-ea11-a813-000d3af46865
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_description: An Alternate Company Security Officer (ACSO) is a security official within an organization who is appointed, briefed and trained by the CSO. The ACSO has the same responsibilities as a CSO and supports them as required. A CSO may delegate their authority and responsibilities to an ACSO or choose to restrict an ACSO to one or more designated sites of the registered organization. ACSOs are optional and dependent on the size of the organization and nature of the contract.
+  adx_name: Alternate Company Security Officer
+  adx_webroleid: e650d0eb-1de3-ea11-a813-000d3af413df

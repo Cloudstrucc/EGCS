@@ -1,0 +1,188 @@
+{% if user %}
+<main property="mainContentOfPage" class="container" typeof="WebPageElement" style="padding-bottom:8%">
+    {% assign cacheString = 'now' | date: "%s" %}
+   
+    {% fetchxml query %}
+  
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="core_fc_submission">
+    <attribute name="core_fc_submissionid" />
+    <attribute name="core_name" />
+    <attribute name="createdon" />
+    <attribute name="modifiedon" />
+    <order attribute="core_name" descending="false" />
+    <filter type="and">
+      <condition attribute="core_fcsubmissioncontact" operator="eq" uitype="contact" value="{{user.id}}" />
+      <condition attribute="core_name" operator="ne" value="{{cachestring}}" />
+    </filter>
+    <link-entity name="core_fo_profile" from="core_fo_profileid" to="core_fo_profile" visible="false" link-type="outer" alias="a_5ab8df9aae3ceb11bf68000d3ae8e48a">
+      <attribute name="core_webpagereadonly" />
+      <attribute name="core_webpageedit" />
+      <attribute name="core_descriptionfr" />
+      <attribute name="core_descriptionen" />
+    </link-entity>
+  </entity>
+</fetch>
+    {% endfetchxml %}
+    <!-- <h1 property="name">{{ snippets["Home/MyApplications"] }}<small
+            class="pull-right">{{user.fullname}}</small></h1> -->
+            
+    {% include 'Breadcrumbs' %}
+   
+    <h1 property="name">{{ snippets["Home/MyApplications"] }}</h1>
+
+    {% if query.results.entities.size > 0 %}
+
+    <section>
+        {{ snippets["Home/MyApplicationsHeaderDescription"] }}
+    </section>
+    <br>
+    {% include 'My Applications' %}
+     <div>
+        <a href="/fundingopportunities" class="btn btn-info pull-right">{{ snippets["Home/NewApplicationButton"] }}</a>    
+      </div>
+     
+    {% else %}
+    <h2 property="name" class="wb-cont h2">
+        {{ snippets["Home/NoApplications"] }} <br><br>
+        <a href="/fundingopportunities" class="btn btn-info">{{ snippets["Home/NewApplicationButton"] }}</a>
+    </h2>
+    {% endif %}
+   
+</main>
+{% else %}
+<!-- unauth -->
+
+{% if website.selected_language.Name == "English" %}
+<main property="mainContentOfPage" class="" typeof="WebPageElement">
+    <div class="experimental bg-cover"
+        data-bgimg="" style="">
+        <div class="container p-0 p-sm-3">
+            <div class="well header-rwd brdr-0 brdr-rds-0 text-white bg-gctheme">
+                <h1 property="name" class="wb-cont">{{snippets["Department Name"]}}</h1>
+                <p class="mrgn-tp-md">{{snippets["Portal/Name"]}}</p>
+            </div>
+        </div>
+        <div class="bg-gctheme opct-90">
+            <div class="container">
+                <div class="row">
+                    <div class="mrgn-tp-md mrgn-bttm-md col-xs-12">
+                        <p class="pull-left text-white mrgn-bttm-0">{{snippets["Portal/Name"]}} &nbsp;</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="gc-srvinfo container">
+        <div class="container">
+
+            <ul class="wb-eqht list-unstyled mrgn-tp-md mrgn-bttm-sm lst-spcd-2 list-responsive">
+                <li><a href="/SignIn">Login or Register</a></li>
+                <li><a href="/fundingopportunities">Funding Opportunities</a></li>
+                <!-- <li><a href="https://www.canada.ca/en/services/benefits/ei.html">Policy Information</a></li> -->
+
+            </ul>
+        </div>
+    </section>
+    <section class="home-your-gov gc-srvinfo well well-sm brdr-0">
+        <div class="container">
+            <h2>Your government</h2>
+            <div class="row mrgn-bttm-md">
+                <div class="col-lg-7 col-xs-12 col-md-6">
+                    <div class="wb-eqht row">
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/en/contact.html">Contact us</a></h3>
+                            <p>Department and agency contacts, change your address hi</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a>
+                            </h3>
+                            <p>A list of current government and related organizations</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/en/government/system.html">How government works</a></h3>
+                            <p>Government structure, priorities, finances and regulations</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://open.canada.ca/en">Open government</a></h3>
+                            <p>Accessible government, open information and data, open dialogue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% else %}
+
+<main property="mainContentOfPage" class="" typeof="WebPageElement">
+    <div class="experimental bg-cover"
+        data-bgimg="" style="">
+        <div class="container p-0 p-sm-3">
+            <div class="well header-rwd brdr-0 brdr-rds-0 text-white bg-gctheme">
+                <h1 property="name" class="wb-cont">{{snippets["Department Name"]}}</h1>
+                <p class="mrgn-tp-md">{{snippets["Portal/Name"]}}</p>
+            </div>
+        </div>
+        <div class="bg-gctheme opct-90">
+            <div class="container">
+                <div class="row">
+                    <div class="mrgn-tp-md mrgn-bttm-md col-xs-12">
+                        <p class="pull-left text-white mrgn-bttm-0">{{snippets["Portal/Name"]}} &nbsp;</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="gc-srvinfo container">
+        <div class="container">
+
+            <ul class="wb-eqht list-unstyled mrgn-tp-md mrgn-bttm-sm lst-spcd-2 list-responsive">
+                <li><a href="/SignIn">Connexion ou inscription</a></li>
+                <li><a href="/fundingopportunities">Opportunités de financement</a></li>
+                <!-- <li><a href="https://www.canada.ca/en/services/benefits/ei.html">Informations sur la politique de 
+                        filtrage de sécurité</a></li>-->
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="home-your-gov gc-srvinfo well well-sm brdr-0" style="padding-bottom:8%">
+        <div class="container">
+            <h2>Votre gouvernement</h2>
+            <div class="row">
+                <div class="col-lg-7 col-xs-12 col-md-6">
+                    <div class="wb-eqht row">
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/fr/contact.html">Contactez-nous</a></h3>
+                            <p>Coordonnées des ministères et des agences, changez votre adresse</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/fr/gouvernement/min.html">Ministères et organismes</a>
+                            </h3>
+                            <p>Une liste des organisations gouvernementales et connexes actuelles</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://www.canada.ca/fr/gouvernement/systeme.html">Comment le gouvernement
+                                    fonctionne</a></h3>
+                            <p>La structure, les priorités, les finances et les réglementations du gouvernement</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><a href="https://open.canada.ca/fr">Gouvernement ouvert</a></h3>
+                            <p>Gouvernement accessible, informations et données ouvertes, dialogue ouvert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% endif %}
+
+{% endif %}

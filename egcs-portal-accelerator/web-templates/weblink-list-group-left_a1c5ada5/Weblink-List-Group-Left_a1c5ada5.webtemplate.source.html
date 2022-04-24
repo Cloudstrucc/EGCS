@@ -1,0 +1,101 @@
+{% assign weblink_set_name = weblink_set_name %}
+
+{% assign showdescriptions = showdescriptions | default: false %}
+{% assign showvalidationstatus = showvalidationstatus | default: false %}
+
+{% if weblink_set_name %}
+  {% assign weblink_set = weblinks[weblink_set_name] %}
+  {% if weblink_set %}
+
+    {% if showvalidationstatus %}
+      {% include 'Get Target' %}
+      {% if targetEntity && targetId %}
+        {% if targetEntity == 'pspc_securityassessmentapplication' %}
+          {% assign cacheString = 'now' | date: "%s" %}
+
+          {% fetchxml issWebPageMetadataQuery %}
+<fetch no-lock="true" >
+  <entity name="pspc_isswebpagemetadata" >
+    <attribute name="pspc_opt_validationstatus" />
+    <attribute name="pspc_num_validationerrorcount" />
+    <filter>
+      <condition attribute="pspc_securityassessmentapplicationid" operator="eq" value="{{ targetId }}" />
+      <condition attribute="pspc_name" operator="ne" value="{{cacheString}}" />
+    </filter>
+    <link-entity name="adx_webpage" from="adx_webpageid" to="pspc_webpagewebpageid" link-type="outer" alias="webPage" >
+      <attribute name="adx_partialurl" />
+    </link-entity>
+  </entity>
+</fetch>
+          {% endfetchxml %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+    {% if showdescriptions %}
+      <div class="{% if weblink_set.editable %}xrm-entity xrm-editable-adx_weblinkset{% endif %}">
+        <div class="list-group weblinks">
+          {% for link in weblink_set.weblinks %}
+            {% assign linkUrlParts = link.url | split: '/' %}
+            {% assign linkPartialUrlIndex = linkUrlParts.size | minus: 1 %}
+            {% assign linkPartialUrl = linkUrlParts[linkPartialUrlIndex] %}
+
+            {% assign pageIsValid = false %}
+            {% assign validationErrorCount = 0 %}
+            {% for issWebPageMetadata in issWebPageMetadataQuery.results.entities %}
+              {% if issWebPageMetadata["webPage.adx_partialurl"] == linkPartialUrl %}
+                {% assign pageStatus = issWebPageMetadata.pspc_opt_validationstatus.value %}
+                {% assign validationErrorCount = issWebPageMetadata.pspc_num_validationerrorcount %}
+                {% include 'pspc_gos_isswebvalidationstatus' %}
+                {% if pageStatus == pspc_gos_isswebvalidationstatus_Valid %}
+                  {% assign pageIsValid = true %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+
+            <a class="list-group-item weblink{% if link.url == request.path %} active{% endif %}" href="{{ link.url | h }}{{ request.query }}" title="{{ link.tooltip | h }}">
+              <div class="list-group-item-heading weblink-name">{{ link.name | h }}{% if validationErrorCount > 0 %}<span class="badge" style="margin-left: 5px;">{{ validationErrorCount }}<span class="wb-inv"> validation errors</span></span>{% endif %}</div>
+              <div class="list-group-item-text weblink-description">
+                {{ link.description | strip_html | text_to_html  }}
+              </div>
+            </a>
+            {% if link.display_page_child_links %}
+                {% for childlink in link.weblinks %}
+                    <a class="list-group-item weblink{% if childlink.url == request.path %} active{% endif %}" href="{{ childlink.url | h }}{{ request.query }}" title="{{ childlink.tooltip | h }}">
+                      <div class="list-group-item-heading weblink-name">{{ childlink.name | h }}{% if validationErrorCount > 0 %}<span class="badge" style="margin-left: 5px;">{{ validationErrorCount }}<span class="wb-inv"> validation errors</span></span>{% endif %}</div>
+                      <div class="list-group-item-text weblink-description">
+                        {{ childlink.description | strip_html | text_to_html  }}
+                      </div>
+                    </a>
+
+                {% endfor %}
+            {% endif %}
+
+          {% endfor %}
+        </div>
+        {% editable weblink_set %}
+      </div>
+    {% else %}
+      <div class="panel panel-default {% if weblink_set.editable %}xrm-entity xrm-editable-adx_weblinkset{% endif %}">
+        <div class="panel-heading">
+          <div class="panel-title"><span class="fa fa-bars" aria-hidden="true" style="font-size: 14px;"></span>&nbsp; {{ snippets["Related Links Navigation Heading"] | default:"Related Links" | h }}</div>
+        </div>
+        <div class="weblinks list-group">
+          {% for link in weblink_set.weblinks %}
+            <a class="weblink list-group-item{% if link.url == request.path %} active{% endif %}" href="{{ link.url | h }}{{ request.query }}" title="{{ link.tooltip | h }}">
+              {% if link.image %}
+                {% if link.image.url startswith '.' %}
+                  <span class="{{ link.image.url | split:'.' | join | h }}" aria-hidden="true"></span>
+                {% else %}
+                  <img src="{{ link.image.url | h }}" alt="{{ link.image.alternate_text | h }}" />
+                {% endif %}
+              {% endif %}
+              {{ link.name | h }}
+            </a>
+          {% endfor %}
+        </div>
+      {% editable weblink_set %}
+      </div>
+  {% endif %}
+ {% endif %}
+{% endif %}

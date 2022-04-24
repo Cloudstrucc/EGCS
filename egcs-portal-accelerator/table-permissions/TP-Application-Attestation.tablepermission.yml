@@ -1,0 +1,13 @@
+adx_append: true
+adx_appendto: true
+adx_create: true
+adx_delete: true
+adx_entitylogicalname: egcs_tp_applicationattestation
+adx_entityname: TP Application Attestation
+adx_entitypermission_webrole:
+- bde7522a-3a52-4619-8531-b022b9c5104f
+- 6bcf8d45-9ff1-404a-827e-efc5c668f813
+adx_entitypermissionid: 1d485c5c-b091-eb11-b1ac-000d3ae93be2
+adx_read: true
+adx_scope: 756150000
+adx_write: true

@@ -1,0 +1,1 @@
+$("#content_form > div.container").wrap('<main role="main" property="mainContentOfPage"></main>');

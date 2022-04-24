@@ -1,0 +1,7 @@
+#ValidationSummaryProfileFormView {
+    margin-top: 50px;
+}
+
+#ContentContainer_MainContent_MainContent_ContentBottom_MissingFieldsMessage{
+    display:none;
+}

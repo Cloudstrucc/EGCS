@@ -1,0 +1,13 @@
+- adx_adddescription: false
+  adx_attributelogicalname: egcs_registereduserrole
+  adx_entityform: 116082f4-20a1-eb11-b1ac-000d3ae8b0f4
+  adx_entityformforcreate: 116082f4-20a1-eb11-b1ac-000d3ae8b0f4
+  adx_entityformmetadataid: b81d1e98-afa2-eb11-b1ac-000d3ae8b98c
+  adx_fieldisrequired: false
+  adx_ignoredefaultvalue: false
+  adx_onsavetype: 100000000
+  adx_onsavevalue: 881990001
+  adx_randomizeoptionsetvalues: false
+  adx_setvalueonsave: true
+  adx_type: 100000000
+  adx_useattributedescriptionproperty: true

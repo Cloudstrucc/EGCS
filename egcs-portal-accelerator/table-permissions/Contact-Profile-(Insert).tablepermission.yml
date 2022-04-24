@@ -1,0 +1,12 @@
+adx_append: false
+adx_appendto: false
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: account
+adx_entityname: Contact Profile (Insert)
+adx_entitypermission_webrole:
+- bde7522a-3a52-4619-8531-b022b9c5104f
+adx_entitypermissionid: 3cfba7b6-0714-ec11-b6e7-000d3a8467f9
+adx_read: true
+adx_scope: 756150000
+adx_write: false

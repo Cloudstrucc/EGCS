@@ -1,0 +1,18 @@
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displaypagechildlinks: false
+  adx_name: My Organizations (UA)
+  adx_openinnewwindow: false
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 3e584825-ce7d-eb11-a812-000d3af3a657
+  adx_weblinksetid: da68042d-181f-eb11-a813-000d3af3ac9d
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displaypagechildlinks: false
+  adx_name: My Applications (UA)
+  adx_openinnewwindow: false
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 6d55244c-ce7d-eb11-a812-000d3af3a657
+  adx_weblinksetid: da68042d-181f-eb11-a813-000d3af3ac9d

@@ -1,0 +1,40 @@
+
+<main role="main" property="mainContentOfPage" typeof="WebPageElement" class="home container">
+    <h1 property="name">{{snippets["GCCF/sign-in/title"] | escape}}</h1>
+
+    <div class="page-copy">
+        {{snippets["GCCF/sign-in/page-copy"]}}
+        <div id="api"></div>
+        {{snippets["GCCF/sign-in/page-copy-below"]}}
+    </div>
+</main>
+
+<script type="text/javascript">
+    $(function() {
+       
+
+        $('#content > ul.nav-account').hide();
+        $('#content-container').css({'padding':'0'});
+        $('.page-content').css({'margin-top':'0'});
+        
+
+         $('.breadcrumb li.active').before('{{snippets["GCCF/sign-in/breadcrumbs"]}}');
+         $('.breadcrumb li.active:last').remove();
+
+        $('form[action*="ExternalLogin"]').prependTo($('#api'));
+
+        $('#api').prepend($('div.alert.alert-info').css({'overflow-wrap':'break-word','margin-top':'-33px'}).html('<p>&nbsp;{{snippets["GCCF/sign-in/invitation-code-alert"] | escape}}<br/><small>{{request.params["InvitationCode"] | escape}}</small></p>'));
+
+        $('#external-login-heading').remove();
+
+        $('#api form button[id*="2KEYS"').addClass('btn-call-to-action').css({'width':'100%'}).html('{{snippets["GCCF/sign-in/gckey-title"] | escape}}').wrap('<div class="row"><div id="gckey" class="col-md-9"></div></div>');
+        $('#gckey').append("{{snippets['GCCF/sign-in/gckey-copy']}}");
+        
+        $('#api form button[id*="SECUREKEY"').addClass('btn-call-to-action').css({'width':'100%','margin-top':'0'}).html('{{snippets["GCCF/sign-in/securekey-title"] | escape}}').wrap('<div class="row"><div id="securekey" class="col-md-6"></div><div class="col-md-3 text-center"><img alt="{{snippets["GCCF/sign-in/securekey-image-alt"]}}" src="/cbs-mosaic-{{website.selected_language.code}}.png"/></div></div>');
+        $('#securekey').append("{{snippets['GCCF/sign-in/securekey-copy']}}");
+
+        $('#securekey').parent().parent().append($('#gckey').parent());
+
+        $('style[title="hide-for-ready"]').remove();
+    });
+</script>

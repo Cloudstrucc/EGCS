@@ -1,0 +1,79 @@
+{% extends 'Layout 1 Column with Left Nav WET6' %}
+
+{% block navigation %}
+  {% assign currentPage = entities["adx_webpage"][page.id] %}
+{% comment %}
+how to dynamically get the weblink set, based on the status reason?
+
+add draft - with applicant
+add draft - with security official
+dynamically decide the web link set based on not parent page + status
+{% endcomment %}
+  {% assign parentPage = currentPage.adx_parentpageid %}
+  {% if parentPage %}
+    {% assign weblink_set_name = parentPage.name %}
+    {% include 'Get Validation Settings' %}
+
+    {% comment %}
+    some hard-coding here. Needs to be refactored to an entity that intersects web roles + iss web form + web link sets + status reason
+    "5F5C7653-860E-EB11-A813-000D3AF413DF" CSP - Security Assessment Application - Security Official
+    {% endcomment %}
+
+    {% if parentPage.id == "5f5c7653-860e-eb11-a813-000d3af413df" %}
+      {% assign securityAssessmentApplication = entities['pspc_securityassessmentapplication'][request.params.id] %}
+      {% if securityAssessmentApplication %}
+        {% assign is_cso = user | has_role: 'Company Security Officer' %}
+        {% include 'pspc_SecurityAssessmentApplication_StatusReason' %}
+        {% if is_cso %}
+            {% if securityAssessmentApplication.statuscode.value == pspc_SecurityAssessmentApplication_StatusReason_Draft %}
+              {% assign weblink_set_name = 'CSP - Security Screening Application - Security Official - Draft' %}
+            {% elseif securityAssessmentApplication.statuscode.value == pspc_SecurityAssessmentApplication_StatusReason_RequiresApplicantInformation %}
+              {% assign weblink_set_name = 'CSP - Security Screening Application - Security Official - Under Review' %}
+            {% elseif securityAssessmentApplication.statuscode.value == pspc_SecurityAssessmentApplication_StatusReason_UnderReviewBySecurityOfficial %}
+              {% assign weblink_set_name = 'CSP - Security Screening Application - Security Official - Under Review' %}
+            {% elseif securityAssessmentApplication.statuscode.value == pspc_SecurityAssessmentApplication_StatusReason_Submitted %}
+              {% assign weblink_set_name = 'CSP - Security Screening Application - Security Official - Under Review' %}
+            {% endif %}
+        {% endif %}
+
+      {% endif %}
+    {% endif %}
+
+    {% comment %}
+    end of hard-coding page ids
+     {% endcomment %}
+
+    {% include "Weblink List Group Left" weblink_set_name: weblink_set_name showdescriptions: true showvalidationstatus: iSSWebForm_Validation_ShowPageStatuses %}
+  {% endif %}
+{% endblock %}
+
+{% block main %}
+
+  {% include 'Form Header' %}
+
+  {% include 'Page Copy' %}
+  
+  {% if page.adx_entitylist %}
+    {% include 'entity_list' key: page.adx_entitylist.id %}
+  {% endif %}
+  
+  {% if page.adx_entityform %}
+    {% entityform id: page.adx_entityform.id %}
+  {% endif %}
+  
+  {% if page.adx_webform %}
+    {% webform id: page.adx_webform.id %}
+  {% endif %}
+
+  {% include 'Page Validation' showerrors: iSSWebForm_Validation_ShowErrors %}
+
+  <div class="page-metadata clearfix">
+    {% editable snippets "Social Share Widget Code Page Bottom" type: 'text' %}
+  </div>
+{% endblock %}
+
+{% block nextPrevious %}
+  {% if parentPage %}
+    {% include "Web Link Button" weblink_set_name: parentPage.name %}
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,44 @@
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 4
+  adx_displaypagechildlinks: false
+  adx_name: Funding Requests (FR)
+  adx_openinnewwindow: false
+  adx_pageid: e7735551-31a8-eb11-9442-000d3ae99d9a
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 1cc3940c-12c3-eb11-bacc-000d3af385d3
+  adx_weblinksetid: 9720f7b5-11c3-eb11-bacc-000d3af385d3
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 2
+  adx_displaypagechildlinks: false
+  adx_name: Documents (FR)
+  adx_openinnewwindow: false
+  adx_pageid: a02de86e-92a7-eb11-9442-000d3ae99d9a
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 581db7ed-11c3-eb11-bacc-000d3af385d3
+  adx_weblinksetid: 9720f7b5-11c3-eb11-bacc-000d3af385d3
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 3
+  adx_displaypagechildlinks: false
+  adx_name: Registered Users (FR)
+  adx_openinnewwindow: false
+  adx_pageid: 0a7cef9e-92a7-eb11-9442-000d3ae99d9a
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 5b6321fa-11c3-eb11-bacc-000d3af385d3
+  adx_weblinksetid: 9720f7b5-11c3-eb11-bacc-000d3af385d3
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 1
+  adx_displaypagechildlinks: false
+  adx_name: Summary (FR)
+  adx_openinnewwindow: false
+  adx_pageid: b3af3b2c-92a7-eb11-9442-000d3ae99d9a
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 723255d5-11c3-eb11-bacc-000d3af385d3
+  adx_weblinksetid: 9720f7b5-11c3-eb11-bacc-000d3af385d3

@@ -1,0 +1,7 @@
+adx_description: Displays a list of child service cards of a service card whose edit page matches the page being loaded
+adx_entityname: adx_webpage
+adx_isdefault: false
+adx_name: Service Card Entity List
+adx_pagetemplateid: 90ce1986-5b04-eb11-a813-000d3af413df
+adx_type: 756150001
+adx_usewebsiteheaderandfooter: true

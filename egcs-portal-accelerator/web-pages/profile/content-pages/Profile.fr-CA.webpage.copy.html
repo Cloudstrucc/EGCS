@@ -1,0 +1,15 @@
+<p>Veuillez fournir quelques informations vous concernant.</p>
+<script>
+$(document).ready(function(){
+
+$("#content_form > div.container").wrap('<main role="main" property="mainContentOfPage"></main>');
+$("#firstname_label").parent().removeClass("required");
+$("#lastname_label").parent().removeClass("required");
+
+$("#firstname_label").html($("#firstname_label").html() + "<span class='required-input'> ({{snippets['Label/Required']}})</span>")
+$("#firstname_label").addClass("required");
+$("#lastname_label").html($("#lastname_label").html() + "<span class='required-input'> ({{snippets['Label/Required']}})</span>")
+$("#lastname_label").addClass("required");
+});
+</script>
+

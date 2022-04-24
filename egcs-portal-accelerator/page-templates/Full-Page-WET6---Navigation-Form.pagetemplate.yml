@@ -1,0 +1,8 @@
+adx_description: WET6 navigation form template with web link set (use for forms that includes next and previous buttons)
+adx_entityname: adx_webpage
+adx_isdefault: false
+adx_name: Full Page WET6 - Navigation Form
+adx_pagetemplateid: d377e68a-eebb-eb11-bacc-000d3a84b079
+adx_type: 756150001
+adx_usewebsiteheaderandfooter: true
+adx_webtemplateid: adc96e60-4c07-eb11-a813-00224809f9ba

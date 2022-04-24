@@ -1,0 +1,13 @@
+- adx_displayname: English
+  adx_languagecode: en
+  adx_lcid: 1033
+  adx_name: English
+  adx_portallanguageid: 58f26a8d-8f0f-4758-afc0-1ceeb882c545
+  adx_systemlanguage: 1033
+- adx_description: French
+  adx_displayname: Français
+  adx_languagecode: fr-CA
+  adx_lcid: 1036
+  adx_name: Français
+  adx_portallanguageid: acad55f8-d17a-ea11-a811-000d3af422f3
+  adx_systemlanguage: 1036

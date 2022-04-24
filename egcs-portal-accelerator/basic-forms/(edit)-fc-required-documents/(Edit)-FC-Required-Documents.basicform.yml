@@ -1,0 +1,34 @@
+adx_appendquerystring: false
+adx_associatecurrentportaluser: false
+adx_attachfile: false
+adx_attachfileallowmultiple: false
+adx_attachfilerequired: false
+adx_attachfilerestrictaccept: false
+adx_autogeneratesteps: false
+adx_captcharequired: false
+adx_entityformid: 05dc7150-228f-eb11-b1ac-000d3ae93be2
+adx_entityname: egcs_fc_requireddocument
+adx_entitypermissionsenabled: true
+adx_entitysourcetype: 756150001
+adx_forceallfieldsrequired: false
+adx_formname: EGCS.PA-Main Form
+adx_geolocation_displaymap: false
+adx_geolocation_enabled: false
+adx_hideformonsuccess: true
+adx_mode: 100000001
+adx_name: (Edit) FC Required Documents
+adx_populatereferenceentitylookupfield: false
+adx_portaluserlookupattributeisactivityparty: false
+adx_recommendedfieldsrequired: false
+adx_recordidquerystringparametername: id
+adx_recordsourceallowcreateonnull: false
+adx_redirecturlappendentityidquerystring: false
+adx_referenceentityshowreadonlyform: false
+adx_referencequerystringisprimarykey: true
+adx_renderwebresourcesinline: false
+adx_setentityreference: false
+adx_showcaptchaforauthenticatedusers: false
+adx_showownerfields: false
+adx_showunsupportedfields: false
+adx_tooltipenabled: false
+adx_validationsummarylinksenabled: true

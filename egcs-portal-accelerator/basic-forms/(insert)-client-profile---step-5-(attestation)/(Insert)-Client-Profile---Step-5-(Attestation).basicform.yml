@@ -1,0 +1,37 @@
+adx_appendquerystring: false
+adx_associatecurrentportaluser: false
+adx_attachfile: false
+adx_attachfileallowmultiple: false
+adx_attachfilerequired: false
+adx_attachfilerestrictaccept: false
+adx_autogeneratesteps: false
+adx_captcharequired: false
+adx_entityformid: 0105f7cf-76a0-eb11-b1ac-000d3ae8b0f4
+adx_entityname: account
+adx_entitypermissionsenabled: true
+adx_entitysourcetype: 756150001
+adx_forceallfieldsrequired: false
+adx_formname: EGCS.PA-Account Profile
+adx_geolocation_displaymap: false
+adx_geolocation_enabled: false
+adx_hideformonsuccess: true
+adx_mode: 100000001
+adx_name: (Insert) Client Profile - Step 5 (Attestation)
+adx_onsuccess: 756150001
+adx_populatereferenceentitylookupfield: false
+adx_portaluserlookupattributeisactivityparty: false
+adx_recommendedfieldsrequired: false
+adx_recordidquerystringparametername: aid
+adx_recordsourceallowcreateonnull: false
+adx_redirecturlappendentityidquerystring: false
+adx_redirectwebpage: 87cdfb86-e3c8-48d7-8a99-c6fb2cbcb845
+adx_referenceentityshowreadonlyform: false
+adx_referencequerystringisprimarykey: true
+adx_renderwebresourcesinline: false
+adx_setentityreference: false
+adx_showcaptchaforauthenticatedusers: false
+adx_showownerfields: false
+adx_showunsupportedfields: false
+adx_tabname: tab_attestation
+adx_tooltipenabled: false
+adx_validationsummarylinksenabled: true

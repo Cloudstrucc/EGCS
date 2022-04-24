@@ -1,0 +1,13 @@
+adx_append: true
+adx_appendto: true
+adx_create: true
+adx_delete: true
+adx_entitylogicalname: sharepointdocumentlocation
+adx_entityname: Document Location / SH Required Document
+adx_entitypermission_webrole: []
+adx_entitypermissionid: 64d8bcf5-c1a2-eb11-b1ac-000d3ae8b98c
+adx_parententitypermission: 17899718-9aa2-eb11-b1ac-000d3ae8b98c
+adx_parentrelationship: egcs_sh_requireddocument_SharePointDocumentLocations
+adx_read: true
+adx_scope: 756150003
+adx_write: true

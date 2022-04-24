@@ -1,0 +1,29 @@
+<div class="alert alert-info" role="alert">
+  <h4>The list below displays all your notifications. These messages are read only and if you need to contact the Department you can submit a service request or send an email to ...</h4>
+</div>
+
+<br>
+ {% fetchxml notification_query %}
+
+        <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+          <entity name="egcs_notification">
+            <attribute name="egcs_notificationid">
+            <attribute name="egcs_name">
+            <attribute name="statuscode">
+            <order attribute="egcs_name" descending="false">
+            <filter type="and">
+              <condition attribute="egcs_contactid" operator="eq" uitype="contact" value="{{user.id}}">
+              <condition attribute="statuscode" operator="ne" value="2">
+            </condition></condition></filter>
+          </order></attribute></attribute></attribute></entity>
+        </fetch>
+
+    {% endfetchxml %}
+
+    {% assign count = notification_query.results.entities.size %}
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Unread <span class="badge badge-light ml-1"> {% if count &gt; 0 %} {{ count }} {% else %} 0 {% endif %} </span></button>
+    </div>
+
+

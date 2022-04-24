@@ -1,0 +1,64 @@
+{% extends 'Layout 1 Column WET6' %}
+
+{% block main %}
+
+    {% assign cacheString = 'now' | date: "%s" %}
+    {% assign RecordId = request.params['competitionid'] %}
+   
+
+  
+    {% fetchxml query %}
+
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+        <entity name="core_submission">
+            <attribute name="core_submissionid" />
+            
+            <filter type="and">
+                <condition attribute="core_contact" operator="eq" value="{{user.id}}" />
+                <condition attribute="core_competition" operator="eq" value="{{RecordId}}" />
+                <condition attribute="statecode" operator="eq" value="0"/>
+                <condition attribute="core_name" operator="ne" value="{{cacheString}}" />
+            </filter>
+        </entity>
+    </fetch>
+
+    {% endfetchxml %}
+
+
+  {% include 'Page Copy' %}
+
+<style>
+  .picklist {
+    height:40px;
+  }
+</style>
+ 
+   {% if query.results.entities.size <= 0 %}
+        {% if page.adx_entitylist %}
+            {% include 'entity_list' key: page.adx_entitylist.id %}
+        {% endif %}
+    
+        {% if page.adx_entityform %}
+            {% entityform id: page.adx_entityform.id %}
+        {% endif %}
+    
+        {% if page.adx_webform %}
+            {% webform id: page.adx_webform.id %}
+        {% endif %}
+    
+        <div class="page-metadata clearfix">
+            {% editable snippets "Social Share Widget Code Page Bottom" type: 'text' %}
+        </div>
+    {% else %}
+        
+        <h4>{{ snippets["Application/Eligibility/NotEligible"]}}</h4>
+    {% endif %}
+   
+{% endblock %}
+
+
+{% block aside %}
+  {% include "Weblink List Group" weblink_set_name: "Secondary Navigation" showdescriptions: true %}
+  {% include "poll" poll_placement_name: "Sidebar" %}
+  {% include "ad" ad_placement_name: "Sidebar Bottom" %}
+{% endblock %}

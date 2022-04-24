@@ -1,0 +1,43 @@
+adx_calendar_enabled: false
+adx_entitylistid: 0d2ad3f4-9de2-eb11-bacb-000d3ae8d0e0
+adx_entityname: egcs_notification
+adx_entitypermissionsenabled: false
+adx_filter_enabled: false
+adx_filterportaluser: egcs_contactid
+adx_idquerystringparametername: id
+adx_map_distancevalues: 5,10,25,50,100
+adx_map_enabled: false
+adx_map_infoboxoffsetx: 25
+adx_map_infoboxoffsety: 46
+adx_map_pushpinheight: 39
+adx_map_pushpinwidth: 32
+adx_map_resturl: https://dev.virtualearth.net/REST/v1/Locations
+adx_map_zoom: 12
+adx_name: Notification List
+adx_odata_enabled: false
+adx_pagesize: 10
+adx_searchenabled: false
+adx_view: 90981a89-9ee2-eb11-bacb-000d3ae8d0e0
+adx_views: >-
+  {
+    "Type": "ViewMetadata",
+    "Views": [
+      {
+        "Type": "View",
+        "ViewId": "90981a89-9ee2-eb11-bacb-000d3ae8d0e0",
+        "DisplayName": [
+          {
+            "Type": "LanguageResources",
+            "LCID": 1033,
+            "Value": ""
+          },
+          {
+            "Type": "LanguageResources",
+            "LCID": 1036,
+            "Value": ""
+          }
+        ]
+      }
+    ]
+  }
+adx_webpagefordetailsview: 8cce0ad6-9ee2-eb11-bacb-000d3ae8d0e0

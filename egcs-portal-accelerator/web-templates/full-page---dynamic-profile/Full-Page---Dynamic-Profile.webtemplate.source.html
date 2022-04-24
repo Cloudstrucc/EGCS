@@ -1,0 +1,26 @@
+{% extends 'Layout 1 Column' %}
+
+{% block main %}  
+
+<style>
+  .picklist {
+    height:40px;
+  }
+</style>  
+<script>
+$("#wb-bc").hide();
+$(".pull-left").hide();
+$(".list-group-item").children(".fa-user").parent().hide()
+</script>
+
+  {% assign is_ai = user | has_role: 'Authorized Individual' %}
+  {% if is_ai %}     
+    {% entityform name: '(Edit) Admin Profile Only' %}     
+  {% else %}
+    {% entityform name: '(Edit) Admin Profile' %} 
+  {% endif %}
+    
+  
+
+
+{% endblock %}

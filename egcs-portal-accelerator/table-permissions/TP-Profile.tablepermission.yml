@@ -1,0 +1,14 @@
+adx_append: true
+adx_appendto: true
+adx_create: true
+adx_delete: true
+adx_entitylogicalname: egcs_tp_profile
+adx_entityname: TP Profile
+adx_entitypermission_webrole:
+- a60a3ce4-2db4-4c26-8ba7-1a3b36f3a0a7
+- bde7522a-3a52-4619-8531-b022b9c5104f
+- 6bcf8d45-9ff1-404a-827e-efc5c668f813
+adx_entitypermissionid: 8abc52ca-4f8a-eb11-b1ac-000d3ae92f19
+adx_read: true
+adx_scope: 756150000
+adx_write: true

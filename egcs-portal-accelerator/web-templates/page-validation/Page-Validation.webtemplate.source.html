@@ -1,0 +1,67 @@
+{% if showerrors %}
+  {% if page.adx_entityform %}
+    {% assign entityForm = entities['adx_entityform'][page.adx_entityform.id] %}
+    {% assign targetEntity = entityForm.adx_entityname %}
+
+    {% if targetEntity == 'pspc_securityassessmentapplication' %}
+      {% if request.params.id %}
+        {% assign targetId = request.params.id %}
+      {% endif %}
+
+    {% assign currentPage = entities["adx_webpage"][page.id] %}
+    {% assign rootPage = currentPage.adx_rootwebpageid %}
+
+      {% include 'Fetch ISS Web Page Metadata by Web Page and Dynamic Target Entity' pspc_webpagewebpageid:rootPage.id targetEntity:targetEntity, id:targetId %}
+
+      {% include 'pspc_gos_isswebvalidationstatus' %}
+      {% if pspc_isswebpagemetadata and pspc_isswebpagemetadata.pspc_opt_validationstatus.value == pspc_gos_isswebvalidationstatus_Invalid %}
+        {% assign validationErrors = pspc_isswebpagemetadata.pspc_txt_validationerrors | split: ',' %}
+{% include 'debug' var:'validationErrors[0]' %}
+{% include 'debug' var:'validationErrors[1]' %}
+{% include 'debug' var:'validationErrors.size' %}
+{% assign cacheString3 = 'now' | date: "%s" %}
+        {% fetchxml contentSnippetsQuery %}
+<fetch no-lock="true" >
+  <entity name="adx_contentsnippet" >
+    <attribute name="adx_name" />
+    <attribute name="adx_value" />
+    <filter type="or" >
+          {% for contentSnippetName in validationErrors %}
+      <condition attribute="adx_name" operator="eq" value="{{ contentSnippetName }}" />
+          {% endfor %}
+
+      <condition attribute="adx_name" operator="ne" value="{{ cacheString3 }}" />
+    </filter>
+  </entity>
+</fetch>
+        {% endfetchxml %}
+
+        {% if contentSnippetsQuery.results.entities.size > 0 %}
+<script type="text/javascript">
+$(function() {
+    var validationSummary = $('#ValidationSummaryEntityFormControl_{{ page.adx_entityform.id | remove: "-" }}_EntityFormView');
+    validationSummary.show();
+    var validationSummaryHtml = '<h4 class="validation-header"><span role="presentation" class="fa fa-info-circle"/> The page is incomplete for the following reasons:</h4>' +
+        '<ul role="presentation">';
+          {% for contentSnippet in contentSnippetsQuery.results.entities %}
+            {% assign contentSnippetNameParts = contentSnippet.adx_name | split: '/' %}
+            {% assign fieldSchemaNameIndex = contentSnippetNameParts.size | minus: 1 %}
+            {% assign fieldSchemaName = contentSnippetNameParts[fieldSchemaNameIndex] %}
+          validationSummaryHtml += '<li><a href="#{{ fieldSchemaName }}_label" onclick="javascript:scrollToAndFocus(&quot;'
+          + '{{ fieldSchemaName }}_label&quot;,&quot;{{ fieldSchemaName }}&quot;);return false;">{{ contentSnippet.adx_value | h }}</a></li>';
+          {% endfor %}
+ validationSummaryHtml += '</ul>'
+    validationSummary.append(validationSummaryHtml);
+});
+</script>
+        {% endif %}
+
+        {% if contentSnippetsQuery.results.entities.size != validationErrors.size %}
+          <script type="text/javascript">
+            console.warn('Expected an error message for each validation errors. Found {{ validationErrors.size }} errors but {{ contentSnippetsQuery.results.entities.size }} messages.');
+          </script>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endif %}

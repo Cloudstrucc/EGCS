@@ -1,0 +1,104 @@
+<script>
+
+    $(".nav-account li").each(function(i) {
+        if(i!==0) {
+            $(this).hide();
+        }
+    });
+
+</script><p>You must choose a secure sign-in method to be able to access the Industrial Security Sector Portal.</p>
+    <br>
+     <div id="api">
+        <form action="/en-CA/Account/Login/ExternalLogin" method="post"><input name="__RequestVerificationToken" type="hidden" value="rRR7jbK9bKzS913Z6KHfqpj_MqfH6KiWBeCv9m_51XwIWgywRZ9Q0mkDKchLHKx8LaiySnbcygTAVfD5pGcWsHXlD0GEn26IEGvQHhX-EEw1">
+            <div class="form-horizontal">
+                <fieldset aria-labelledby="external-login-heading">
+
+                    <div aria-describedby="loginValidationSummary" aria-label="Sign in failed." class="validation-summary-valid alert alert-block alert-danger" data-valmsg-summary="true" id="loginValidationSummary" tabindex="0">
+                        <ul>
+                            <li style="display:none"></li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <div id="securekey" class="col-md-6"><button name="provider" type="submit" class="btn btn-primary btn-line btn-call-to-action" id="https://gckeyep.b2clogin.com/tfp/b4104781-1fd5-46cc-85ef-d2ac7368fb0a/B2C_1A_SECUREKEY_signup_signin/v2.0/" title="Sign in with your SecureKey account." value="https://gckeyep.b2clogin.com/tfp/b4104781-1fd5-46cc-85ef-d2ac7368fb0a/B2C_1A_SECUREKEY_signup_signin/v2.0/" style="width: 100%; margin-top: 0px;">Sign-in using a partner site</button>
+                            <ul>
+                                <li>Use the same sign-in information you use for other online services (for example,
+                                    online banking) to sign-in to the Portal. You will temporarily go to your sign-in
+                                    partner site; once signed in; you will be redirected back here.</li>
+                                <li>Your sign-in partner site will not know which government service you are using. None
+                                    of your information (for example, financial, banking) will be shared with the Impact
+                                    Assessment Agency of Canada.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 text-center"><img alt="Mosaic of sign-in partner logos" src="/cbs-mosaic-en.png"></div>
+                    </div>
+
+                    <div class="row">
+                        <div id="gckey" class="col-md-9"><button name="provider" type="submit" class="btn btn-primary btn-line btn-call-to-action" id="https://gckeyep.b2clogin.com/tfp/b4104781-1fd5-46cc-85ef-d2ac7368fb0a/B2C_1A_2KEYS_signup_signin/v2.0/" title="Sign in with your GCKey account." value="https://gckeyep.b2clogin.com/tfp/b4104781-1fd5-46cc-85ef-d2ac7368fb0a/B2C_1A_2KEYS_signup_signin/v2.0/" style="width: 100%;">Sign-in using GCKey</button>
+                            <ul>
+                                <li>Sign-in with a GCKey user ID and password; or</li>
+                                <li>Register for a GCKey user ID and password if you do not have one.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </div>
+        </form>
+    </div>
+
+    <p><a href="/en/faq/">Frequently Asked Questions (FAQs)</a></p>
+    <br>
+    <p>
+        <span>•Don't share passwords or PINs online or over the phone.</span><br>
+        <span>•Don’t choose to have your credentials saved by your web browser.</span> <br>
+        <span>•Log off or sign out of accounts and websites when you leave the computer.</span><br>
+        <span>•Clear your browser’s cache and close your browser after your online session.</span><br>
+        <span>•Use caution when entering passwords or PINs in public.</span><br>
+    </p>
+    <button class="btn btn-default" onclick="window.history.back();">Go back</button>
+
+<script>
+    $(function() {
+        // var language = 'eng';
+        // if ('en' === 'fr') {
+        //     language = 'fra';
+        // }
+        // $.ajax({
+        //     url: 'https://lang-canada.fjgc-gccf.gc.ca/v1/lang',
+        //     type: 'PUT',
+        //     datatype: 'application/json',
+        //     contentType: 'application/json',
+        //     data: JSON.stringify({lang: language}),
+        //     xhrFields: {
+        //         withCredentials: true
+        //     },
+        //     error: function (jqXHR, textStatus, errorThrown) { console.log(errorThrown) }
+        // });
+
+        // $('#content > ul.nav-account').hide();
+        // $('#content-container').css({'padding':'0'});
+        // $('.page-content').css({'margin-top':'0'});
+
+        // // $('.breadcrumb li.active').before('<li><a href="/">Proponents</a></li><li class="active">&nbsp;&nbsp;&nbsp;Sign In</li>');
+        // // $('.breadcrumb li.active:last').remove();
+
+        // $('form[action*="ExternalLogin"]').prependTo($('#api'));
+
+        // $('#api').prepend($('div.alert.alert-info').css({'overflow-wrap':'break-word','margin-top':'-33px'}).html('<p>&nbsp;This sign-in will validate your profile with the code:<br/><small></small></p>'));
+
+        $('#external-login-heading').parent().parent().remove()
+        
+
+        // $('#api form button[id*="signin_gckey"').addClass('btn-call-to-action').css({'width':'100%'}).html('Sign-in using GCKey').wrap('<div class="row"><div id="gckey" class="col-md-9"></div></div>');
+        // $('#gckey').append("<ul><li>Sign-in with a GCKey user ID and password; or</li><li>Register for a GCKey user ID and password if you do not have one.</li></ul>");
+        
+        // $('#api form button[id*="signin_securekey"').addClass('btn-call-to-action').css({'width':'100%','margin-top':'0'}).html('Sign-in using a partner site').wrap('<div class="row"><div id="securekey" class="col-md-6"></div><div class="col-md-3 text-center"><img alt="Mosaic of sign-in partner logos" src="/cbs-mosaic-en.png"/></div></div>');
+        // $('#securekey').append("<ul><li>Use the same sign-in information you use for other online services (for example, online banking) to sign-in to the Portal. You will temporarily go to your sign-in partner site; once signed in; you will be redirected back here.</li><li>Your sign-in partner site will not know which government service you are using. None of your information (for example, financial, banking) will be shared with the Impact Assessment Agency of Canada.</li></ul>");
+
+        // $('#securekey').parent().parent().append($('#gckey').parent());
+
+        // $('style[title="hide-for-ready"]').remove();
+    });
+
+</script>

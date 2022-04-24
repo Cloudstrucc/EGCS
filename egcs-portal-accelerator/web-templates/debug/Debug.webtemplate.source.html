@@ -1,0 +1,25 @@
+{% comment %}
+  {% raw %}
+
+    description:
+      Outputs a variable name and its value to the browser console for debugging purposes.
+
+    input parameters:
+      var (optional): The string name of the variable whose value is output to the console
+      message (optional): The message to print to the console
+
+    usage:
+      {% include 'Debug' var:'nameOfSomeVariable' %}
+
+  {% endraw %}
+{% endcomment %}
+
+<script type="text/javascript">
+{% if var %}
+  {% assign liquidCode = "{" | append: "{ " | append: var | append: " }" | append: "}" %}
+  console.log("{{ var | replace: '"', '\"' }}: {{ liquidCode | liquid }}");
+{% endif %}
+{% if message %}
+  console.log("{{ message }}");
+{% endif %}
+</script>

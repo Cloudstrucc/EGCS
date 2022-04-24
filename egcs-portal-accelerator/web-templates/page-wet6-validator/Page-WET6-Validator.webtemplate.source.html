@@ -1,0 +1,41 @@
+
+{% block stylesheet %}
+
+
+{% endblock%}
+
+{% block main %}
+<script href="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script href="https://wet-boew.github.io/v4.0-ci/wet-boew/js/wet-boew.min.js"></script>
+<script href="https://wet-boew.github.io/v4.0-ci/wet-boew/js/deps/jquery.validate.min.js"></script>
+<link rel="stylesheet" href="https://wet-boew.github.io/v4.0-ci/theme-wet-boew/css/theme.min.css"/>
+  {% include 'Page Copy' %}
+
+
+  {% if page.adx_entitylist %}
+    {% include 'entity_list' key: page.adx_entitylist.id %}
+  {% endif %}
+  
+  {% if page.adx_entityform %}
+    {% entityform id: page.adx_entityform.id %}
+  {% endif %}
+  
+  {% if page.adx_webform %}
+    {% webform id: page.adx_webform.id %}
+  {% endif %}
+  
+  <div class="page-metadata clearfix">
+    {% editable snippets "Social Share Widget Code Page Bottom" type: 'text' %}
+  </div>
+{% endblock %}
+
+{% block aside %}
+  {% include "Weblink List Group" weblink_set_name: "Secondary Navigation" showdescriptions: true %}
+  {% include "poll" poll_placement_name: "Sidebar" %}
+  {% include "ad" ad_placement_name: "Sidebar Bottom" %}
+{% endblock %}
+
+{% block script %}
+<script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jquery.validate.min.js"></script>
+
+{% endblock %}

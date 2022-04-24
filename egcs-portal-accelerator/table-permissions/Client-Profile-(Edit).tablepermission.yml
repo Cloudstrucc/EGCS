@@ -1,0 +1,14 @@
+adx_append: true
+adx_appendto: true
+adx_contactrelationship: account_primary_contact
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: account
+adx_entityname: Client Profile (Edit)
+adx_entitypermission_webrole:
+- bde7522a-3a52-4619-8531-b022b9c5104f
+- 6bcf8d45-9ff1-404a-827e-efc5c668f813
+adx_entitypermissionid: ee5745eb-8818-eb11-a813-000d3af3afcd
+adx_read: true
+adx_scope: 756150001
+adx_write: true

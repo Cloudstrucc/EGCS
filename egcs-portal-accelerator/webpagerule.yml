@@ -1,0 +1,49 @@
+- adx_name: Service Request Submission (Anonymous) rule
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole: []
+  adx_webpageaccesscontrolruleid: 03d3a704-49e6-ea11-a817-000d3af413df
+- adx_name: My Organizations - Add Resource -Access Control
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - 8967af08-15e3-ea11-a813-000d3af413df
+  - 01642ffc-22e3-ea11-a813-000d3af413df
+  adx_webpageaccesscontrolruleid: 06acde87-8d23-eb11-a813-000d3af413df
+- adx_name: Grant Change to Content
+  adx_right: 1
+  adx_webpageaccesscontrolrule_webrole: []
+  adx_webpageaccesscontrolruleid: 2981c30e-9d1a-49a3-916b-a0c403b24126
+- adx_name: CSP - Security Assessment Application - Security Officer
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - 14f9864b-15e3-ea11-a813-000d3af413df
+  - e650d0eb-1de3-ea11-a813-000d3af413df
+  adx_webpageaccesscontrolruleid: 3eed67b6-880e-eb11-a813-000d3af413df
+- adx_name: Organization Dashboard - Access Control
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - 8967af08-15e3-ea11-a813-000d3af413df
+  - 01642ffc-22e3-ea11-a813-000d3af413df
+  adx_webpageaccesscontrolruleid: 53fe7cba-8d23-eb11-a813-000d3af413df
+- adx_name: Grant Change to Administrators
+  adx_right: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 6bcf8d45-9ff1-404a-827e-efc5c668f813
+  adx_webpageaccesscontrolruleid: 610f6634-dac8-4f6c-aac9-c86b94fb34b4
+  adx_webpageid: 87cdfb86-e3c8-48d7-8a99-c6fb2cbcb845
+- adx_name: My Organizations - Access Control
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - 8967af08-15e3-ea11-a813-000d3af413df
+  - 14f9864b-15e3-ea11-a813-000d3af413df
+  - e650d0eb-1de3-ea11-a813-000d3af413df
+  - 01642ffc-22e3-ea11-a813-000d3af413df
+  adx_webpageaccesscontrolruleid: b1a49140-8d23-eb11-a813-000d3af413df
+- adx_name: Service Request Submission - Rule
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - a03b4e95-10e3-ea11-a813-000d3af413df
+  - 7fd6bbad-10e3-ea11-a813-000d3af413df
+  - a60a3ce4-2db4-4c26-8ba7-1a3b36f3a0a7
+  adx_webpageaccesscontrolruleid: f61c4a4f-2ee3-ea11-a813-000d3af413df
+  statecode: 1
+  statuscode: 2

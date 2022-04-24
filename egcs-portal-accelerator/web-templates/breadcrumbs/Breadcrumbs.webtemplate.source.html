@@ -1,0 +1,68 @@
+{% assign title = title | default: page.title %}
+<div class="container">
+    <nav id="wb-bc" property="breadcumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                {% for crumb in page.breadcrumbs -%}
+                <li>
+                    <a href="{{ crumb.url | h }}{{ request.query }}" title="{{ crumb.title | h }}">{{ crumb.title | truncate: 24 | h }}</a>
+                </li>
+                {% endfor -%}
+                <li class="active">{% block activebreadcrumb %}{{ title | h }}{% endblock %}</li>
+            </ol>
+        </div>
+    <nav>
+</div>
+
+
+{% include 'NavigationMenu' %}
+{% comment %}
+    <section id="wb-so">
+        <div class="row">
+            <div class="col-md-12">
+                {% if user %}
+                <span class="mrgn-rght-md">{{snippets["BreadCrumb/SignedInAs"]}}<span class="wb-so-uname">{{user.fullname}}</span></span>
+                <a href="/profile" class="btn btn-default btn-default" role="button">{{snippets["BreadCrumb/AccountSettings/Button"]}}</a>
+                <a href="{% if homeurl%}/{{homeurl}}{% endif %}/Account/Login/LogOff?returnUrl={{"home-acceuil"|escape}}" class="btn btn-primary" role="button">{{snippets["BreadCrumb/AccountSignOut/Button"]}}</a>
+               
+                <a href="#" class="btn btn-primary" role="button" data-toggle="dropdown" aria-expanded="false">{{snippets["BreadCrumb/Menu/Button"]}}<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+                <div class="dropdown-menu pull-right">
+                    <div class="col-md-12">
+                        {% assign weblink_set_name = "Main Navigation Menu" %}   
+
+                        {% assign weblink_set = weblinks[weblink_set_name] %}
+                        {% for link in weblink_set.weblinks %}
+                        
+                            <div><a role="menuitem" class="dropdown-item{% if link.url == request.path %} active{% endif %}" href="{{ link.url | h }}{{ request.query }}" title="{{ link.tooltip | h }}">{{ link.name | h }}</a></div>
+                        {% endfor %}
+                    </div>
+                   
+                </div>
+                {% else %}
+                <a href="/Account/Login/" class="btn btn-primary" role="button">{{snippets["BreadCrumb/AccountSignIn/Button"]}}</a>
+               
+                <a href="#" class="btn btn-primary" role="button" data-toggle="dropdown" aria-expanded="false">{{snippets["BreadCrumb/Menu/Button"]}}<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+                <div class="dropdown-menu pull-right">
+                    <div class="col-md-12">
+                        {% assign weblink_set_name = "Navigation Menu - Unauthenticated" %}   
+
+                        {% assign weblink_set = weblinks[weblink_set_name] %}
+                        {% for link in weblink_set.weblinks %}
+                        
+                            <div><a role="menuitem" class="dropdown-item{% if link.url == request.path %} active{% endif %}" href="{{ link.url | h }}{{ request.query }}" title="{{ link.tooltip | h }}">{{ link.name | h }}</a></div>
+                        {% endfor %}
+                    </div>
+                
+                </div>
+                {% endif %}
+                
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+{% endcomment %}
+<br>
+

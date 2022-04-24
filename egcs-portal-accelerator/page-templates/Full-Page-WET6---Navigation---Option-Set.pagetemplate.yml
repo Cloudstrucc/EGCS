@@ -1,0 +1,8 @@
+adx_description: Contains the Web Template for Left Navigation based using Web Link Sets, and also has Next and Previous buttons also leveraging Web Link Sets
+adx_entityname: adx_webpage
+adx_isdefault: false
+adx_name: Full Page WET6 - Navigation - Option Set
+adx_pagetemplateid: a132d7e7-4c07-eb11-a813-00224809f9ba
+adx_type: 756150001
+adx_usewebsiteheaderandfooter: true
+adx_webtemplateid: c3af6c7c-3f1d-eb11-a813-000d3af3ac9d

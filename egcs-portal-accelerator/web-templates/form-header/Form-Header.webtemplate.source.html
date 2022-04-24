@@ -1,0 +1,31 @@
+{% fetchxml query %}
+  <fetch version="1.0" mapping="logical" no-lock="true" returntotalrecordcount="true">
+    <entity name="adx_sitesetting" >
+      <attribute name="adx_value" />
+      <filter>
+        <condition attribute="adx_name" operator="eq" value="Page/{{ page.adx_name }}/Form Header" />
+        <condition attribute="statecode" operator="eq" value="0" />
+      </filter>
+    </entity>
+  </fetch>
+{% endfetchxml %}
+
+{% if query.results.total_record_count == 1 %}
+  {% for result in query.results.entities %}
+    <div id="formHeader">
+    {% assign formHeaderEntityFormId = result.adx_value %}
+    {% entityform id: formHeaderEntityFormId %}
+    </div>
+  {% endfor %}
+
+  {% comment %}
+    The form header entity form creates a DOM element for the validation summary section which is show when messages from the entity form 
+    for the rest of the page are shown, so remove it.
+  {% endcomment %}
+  <script type="text/javascript">
+  $(function() {
+    var validationSummary = $("#ValidationSummaryEntityFormControl_{{ formHeaderEntityFormId | downcase | replace: '-', '' }}_EntityFormView");
+    if (validationSummary) validationSummary.remove();
+  });
+  </script>
+{% endif %}

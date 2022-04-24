@@ -1,0 +1,55 @@
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 2
+  adx_displaypagechildlinks: false
+  adx_name: 'Step 2: Activities (FR)'
+  adx_openinnewwindow: false
+  adx_pageid: a48a8b39-09c4-eb11-bacc-000d3af38731
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 407132f3-0cc4-eb11-bacc-000d3af38731
+  adx_weblinksetid: 18e52a72-08c4-eb11-bacc-000d3af38731
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 5
+  adx_displaypagechildlinks: false
+  adx_name: 'Step 5: Attestation (FR)'
+  adx_openinnewwindow: false
+  adx_pageid: 428c2aa4-0bc4-eb11-bacc-000d3af38731
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 7d2fc61e-0dc4-eb11-bacc-000d3af38731
+  adx_weblinksetid: 18e52a72-08c4-eb11-bacc-000d3af38731
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 3
+  adx_displaypagechildlinks: false
+  adx_name: 'Step 3: Financials (FR)'
+  adx_openinnewwindow: false
+  adx_pageid: bff2d0b2-0ac4-eb11-bacc-000d3af38731
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 90bb6e05-0dc4-eb11-bacc-000d3af38731
+  adx_weblinksetid: 18e52a72-08c4-eb11-bacc-000d3af38731
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 1
+  adx_displaypagechildlinks: false
+  adx_name: 'Step 1: Summary (FR)'
+  adx_openinnewwindow: false
+  adx_pageid: 5de19f08-08c4-eb11-bacc-000d3af38731
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: 9e5781e5-0cc4-eb11-bacc-000d3af38731
+  adx_weblinksetid: 18e52a72-08c4-eb11-bacc-000d3af38731
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 4
+  adx_displaypagechildlinks: false
+  adx_name: 'Step 4: Documents (FR)'
+  adx_openinnewwindow: false
+  adx_pageid: 6a30e5f6-0ac4-eb11-bacc-000d3af38731
+  adx_publishingstateid: 38c7d71a-31fd-4c2a-b7b0-fa2cc7381654
+  adx_robotsfollowlink: true
+  adx_weblinkid: c30eff11-0dc4-eb11-bacc-000d3af38731
+  adx_weblinksetid: 18e52a72-08c4-eb11-bacc-000d3af38731
